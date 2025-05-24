@@ -95,9 +95,9 @@ print("-" * 40)
 lengths = [len(word) for word in words]
 counter = Counter(lengths)
 
-print(f"{'LEN':>3}|{'OCCURENCES':^15}|{'NR.':<3}")
+print(f"{'LEN':>3}|{'OCCURENCES':^17}|{'NR.':<3}")
 print("-" * 40)
 
 for length in sorted(counter):
     stars = '*' * counter[length]
-    print(f"{length:>3}|{stars:<15}|{counter[length]}")
+    print(f"{length:>3}|{stars:<17}|{counter[length]}")
