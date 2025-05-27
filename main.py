@@ -8,7 +8,6 @@ email:  michal@hurai.com
 from collections import Counter
 from string import punctuation
 
-# Registrovaní uživatelé
 REGISTERED_USERS = {
     "bob": "123",
     "ann": "pass123",
@@ -16,7 +15,6 @@ REGISTERED_USERS = {
     "liz": "pass123"
 }
 
-# Texty na analýzu
 TEXTS = [
     '''Situated about 10 miles west of Kemmerer,
     Fossil Butte is a ruggedly impressive
@@ -45,7 +43,6 @@ TEXTS = [
     garpike and stingray are also present.'''
 ]
 
-# Prihlásenie
 username = input("username: ")
 password = input("password: ")
 
@@ -58,7 +55,6 @@ print(f"Welcome to the app, {username}")
 print(f"We have {len(TEXTS)} texts to be analyzed.")
 print("-" * 40)
 
-# Výber textu
 selection = input("Enter a number btw. 1 and 3 to select: ")
 
 if not selection.isdigit():
@@ -72,7 +68,6 @@ if index < 0 or index >= len(TEXTS):
 
 print("-" * 40)
 
-# Výber a spracovanie textu
 text = TEXTS[index]
 words = [word.strip(punctuation) for word in text.split()]
 
@@ -91,7 +86,6 @@ print(f"There are {len(numeric_strings)} numeric strings.")
 print(f"The sum of all the numbers {numbers_sum}")
 print("-" * 40)
 
-# Histogram
 lengths = [len(word) for word in words]
 counter = Counter(lengths)
 
